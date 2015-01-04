@@ -11,35 +11,13 @@ namespace WindowsFormsApplication1
 {
     public partial class FormAccueil : Form
     {
-        public List<bool> TabChoix = new List<bool>();
+     //   int mavaleur = 1000;
+        Form Alancer = new FormFamille();
+
+        //public List<bool> TabChoix = new List<bool>();
         public FormAccueil()
         {
             InitializeComponent();
-            for (int i = 0; i < 20; i++) 
-            { 
-                this.TabChoix.Add( false); 
-            }// initialisation du tableau des choix
-        }
-        private bool VerifChoix(int j)
-        {
-            bool ok = false;
-            int s = 0;
-
-            for (int i = 1; i < j; i++)
-            {
-                ok = this.TabChoix[i];
-                if (!ok) { s = s + 1; };
-            }
-            if (s == 0)
-            {
-                MessageBox.Show("Choix OK");
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Veuillez progresser dans l'ordre SVP");
-                return false;
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,8 +28,8 @@ namespace WindowsFormsApplication1
 
         private void RbFamile_CheckedChanged(object sender, EventArgs e)
         {
-            FormFamille frm = new FormFamille();
-            frm.ShowDialog();         // modale
+            Alancer = new FormFamille();
+           
 
         }
 
@@ -72,6 +50,11 @@ namespace WindowsFormsApplication1
         private void button1_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show(this.groupBox1.Controls.Count.ToString());
+        }
+
+        private void BtValider_Click(object sender, EventArgs e)
+        {
+            Alancer.ShowDialog();
         }
 
 

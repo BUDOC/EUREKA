@@ -46,6 +46,7 @@
             this.RbFamile = new System.Windows.Forms.RadioButton();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtValider = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtValider);
             this.groupBox1.Controls.Add(this.radioButton9);
             this.groupBox1.Controls.Add(this.radioButton8);
             this.groupBox1.Controls.Add(this.radioButton7);
@@ -77,7 +79,7 @@
             this.groupBox1.Controls.Add(this.RbFamile);
             this.groupBox1.Location = new System.Drawing.Point(29, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 343);
+            this.groupBox1.Size = new System.Drawing.Size(402, 325);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choix : procédez dans l\'ordre";
@@ -85,6 +87,7 @@
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
+            this.radioButton9.Enabled = false;
             this.radioButton9.Location = new System.Drawing.Point(24, 42);
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(144, 17);
@@ -95,6 +98,7 @@
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
+            this.radioButton8.Enabled = false;
             this.radioButton8.Location = new System.Drawing.Point(24, 244);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(261, 17);
@@ -105,6 +109,7 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
+            this.radioButton7.Enabled = false;
             this.radioButton7.Location = new System.Drawing.Point(24, 221);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(231, 17);
@@ -115,6 +120,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
+            this.radioButton6.Enabled = false;
             this.radioButton6.Location = new System.Drawing.Point(23, 198);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(151, 17);
@@ -125,6 +131,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
+            this.radioButton5.Enabled = false;
             this.radioButton5.Location = new System.Drawing.Point(23, 175);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(140, 17);
@@ -135,6 +142,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.Enabled = false;
             this.radioButton4.Location = new System.Drawing.Point(23, 152);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(99, 17);
@@ -145,6 +153,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.Enabled = false;
             this.radioButton3.Location = new System.Drawing.Point(23, 129);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(147, 17);
@@ -155,6 +164,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
             this.radioButton2.Location = new System.Drawing.Point(24, 106);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(175, 17);
@@ -165,6 +175,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
             this.radioButton1.Location = new System.Drawing.Point(24, 83);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(86, 17);
@@ -175,22 +186,23 @@
             // RbIntro
             // 
             this.RbIntro.AutoSize = true;
-            this.RbIntro.Checked = true;
+            this.RbIntro.Enabled = false;
             this.RbIntro.Location = new System.Drawing.Point(24, 60);
             this.RbIntro.Name = "RbIntro";
             this.RbIntro.Size = new System.Drawing.Size(81, 17);
             this.RbIntro.TabIndex = 1;
-            this.RbIntro.TabStop = true;
             this.RbIntro.Text = "Introduction";
             this.RbIntro.UseVisualStyleBackColor = true;
             // 
             // RbFamile
             // 
             this.RbFamile.AutoSize = true;
+            this.RbFamile.Checked = true;
             this.RbFamile.Location = new System.Drawing.Point(24, 19);
             this.RbFamile.Name = "RbFamile";
             this.RbFamile.Size = new System.Drawing.Size(183, 17);
             this.RbFamile.TabIndex = 0;
+            this.RbFamile.TabStop = true;
             this.RbFamile.Text = "Présentation de la famille  Dupont";
             this.RbFamile.UseVisualStyleBackColor = true;
             this.RbFamile.CheckedChanged += new System.EventHandler(this.RbFamile_CheckedChanged);
@@ -213,13 +225,23 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(910, 172);
+            this.button1.Location = new System.Drawing.Point(890, 160);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // BtValider
+            // 
+            this.BtValider.Location = new System.Drawing.Point(252, 287);
+            this.BtValider.Name = "BtValider";
+            this.BtValider.Size = new System.Drawing.Size(130, 23);
+            this.BtValider.TabIndex = 11;
+            this.BtValider.Text = "Valider";
+            this.BtValider.UseVisualStyleBackColor = true;
+            this.BtValider.Click += new System.EventHandler(this.BtValider_Click);
             // 
             // FormAccueil
             // 
@@ -258,6 +280,7 @@
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtValider;
     }
 }
 
