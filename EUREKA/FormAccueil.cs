@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     {
      //   int mavaleur = 1000;
         Form Alancer = new FormFamille();
+        Random r = new Random();
 
         //public List<bool> TabChoix = new List<bool>();
         public FormAccueil()
@@ -70,16 +71,11 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Random r = new Random();
-          
-           int  valeur =r.Next(20);
-           int v2= r.Next(20);
-           // Random rnd1 = new Random();
-           this.labTitre.Text = valeur.ToString();
-           this.chart1.Series["Causes"].Points[2].SetValueY(valeur);
-           this.chart1.Series["Causes"].Points[1].SetValueY(v2);
-           //this.chart1.Show();
-          // this.chart1.Update();
+           this.chart1.Series["Causes"].Points.Clear();
+           this.chart1.Series["Causes"].Points.AddXY("c1", r.Next(20));
+           this.chart1.Series["Causes"].Points.AddXY("c2", r.Next(20));
+           this.chart1.Series["Causes"].Points.AddXY("c3", r.Next(20));
+           this.chart1.Series["Causes"].Points.AddXY("c4", r.Next(20));
         }
 
 
