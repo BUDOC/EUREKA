@@ -118,6 +118,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormFamille";
             this.Text = "MOI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormFamille_FormClosing);
+          //  this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormFamille_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
 {
     public partial class FormFamille : Form
     {
+        private bool vous = false;
         public FormFamille()
         {
             InitializeComponent();
@@ -38,11 +39,24 @@ namespace WindowsFormsApplication1
 
         private void BtSuite_Click(object sender, EventArgs e)
         {
-  
+            this.vous = true;
             FormVous frm = new FormVous();
            frm.ShowDialog(); // modale
             //FormFamille frm = new FormFamille();
            // frm.ShowDialog();  
         }
+
+        private void FormFamille_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!vous)
+            {
+                var result = MessageBox.Show("Veuillez vous présenter avant de quitter le fenêtre SVP!");
+                e.Cancel = true;
+                return;
+            }
+
+        }
+
+       
     }
 }

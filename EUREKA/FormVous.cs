@@ -15,5 +15,29 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        private void bienvenue()
+    {
+        this.label4.Text = this.textBoxPrenom.Text +" la famille Dupond est heureuse\n de faire votre connaissance " ;
+    }
+        private void textBoxPrenom_TextChanged(object sender, EventArgs e)
+        {
+            if (this.textBoxNom.Text != "") { this.BtValider.Enabled = true; this.bienvenue(); }
+            
+        }
+
+        private void textBoxNom_TextChanged(object sender, EventArgs e)
+        {
+            if (this.textBoxPrenom.Text != "") { this.BtValider.Enabled = true; this.bienvenue(); }
+        }
+
+        private void FormVous_Load(object sender, EventArgs e)
+        {
+            this.label4.Text = "";
+        }
+
+        private void BtValider_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
