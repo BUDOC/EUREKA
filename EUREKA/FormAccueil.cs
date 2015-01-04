@@ -22,6 +22,17 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // chart1
+   
+            this.chart1.ResetAutoValues();
+            this.chart1.CreateGraphics();
+            this.chart1.Series["Causes"].Points.Clear();
+            this.chart1.Series["Causes"].Points.AddXY("c1",2);
+            this.chart1.Series["Causes"].Points.AddXY("c2", 4);
+            this.chart1.Series["Causes"].Points.AddXY("c3", 3);
+            this.chart1.Series["Causes"].Points.AddXY("c4", 8);
+           // this.chart1.Series["Causes"].Points[2].SetValueY(54);
+
             this.labTitre.AutoSize = true;
             this.labTitre.Text = "A travers cette présentation nous allons apprendre comment aborder un problème." + "\r\n" + "Trouver les causes pricipales du problème et chercher des solutions";
         }
@@ -55,6 +66,20 @@ namespace WindowsFormsApplication1
         private void BtValider_Click(object sender, EventArgs e)
         {
             Alancer.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Random r = new Random();
+          
+           int  valeur =r.Next(20);
+           int v2= r.Next(20);
+           // Random rnd1 = new Random();
+           this.labTitre.Text = valeur.ToString();
+           this.chart1.Series["Causes"].Points[2].SetValueY(valeur);
+           this.chart1.Series["Causes"].Points[1].SetValueY(v2);
+           //this.chart1.Show();
+          // this.chart1.Update();
         }
 
 
