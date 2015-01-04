@@ -11,18 +11,19 @@ namespace WindowsFormsApplication1
 {
     public partial class FormVous : Form
     {
+        public Form Origine = null;
         public FormVous()
         {
             InitializeComponent();
         }
         private void bienvenue()
-    {
-        this.label4.Text = this.textBoxPrenom.Text +" la famille Dupond est heureuse\n de faire votre connaissance " ;
-    }
+        {
+            this.label4.Text = this.textBoxPrenom.Text + " la famille Dupond est heureuse\n de faire votre connaissance ";
+        }
         private void textBoxPrenom_TextChanged(object sender, EventArgs e)
         {
             if (this.textBoxNom.Text != "") { this.BtValider.Enabled = true; this.bienvenue(); }
-            
+
         }
 
         private void textBoxNom_TextChanged(object sender, EventArgs e)
@@ -37,6 +38,7 @@ namespace WindowsFormsApplication1
 
         private void BtValider_Click(object sender, EventArgs e)
         {
+            Origine.Close();
             this.Close();
         }
     }

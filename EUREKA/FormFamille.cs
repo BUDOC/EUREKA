@@ -41,9 +41,8 @@ namespace WindowsFormsApplication1
         {
             this.vous = true;
             FormVous frm = new FormVous();
-           frm.ShowDialog(); // modale
-            //FormFamille frm = new FormFamille();
-           // frm.ShowDialog();  
+            frm.Origine = this;
+            frm.ShowDialog(); // modale
         }
 
         private void FormFamille_FormClosing(object sender, FormClosingEventArgs e)
@@ -57,6 +56,6 @@ namespace WindowsFormsApplication1
 
         }
 
-       
+
     }
 }
