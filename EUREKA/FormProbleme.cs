@@ -39,9 +39,9 @@ namespace WindowsFormsApplication1
         private void BtSuite_Click(object sender, EventArgs e)
         {
   
-            FormVous frm = new FormVous();
-           frm.ShowDialog(); // modale
-            //FormFamille frm = new FormFamille();
+        //    FormVous frm = new FormVous();
+         //  frm.ShowDialog(); // modale
+          
            // frm.ShowDialog();  
         }
     }
