@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
             if (!vous)
             {
                 var result = MessageBox.Show("Veuillez vous présenter avant de quitter le fenêtre SVP!");
-                e.Cancel = true;
+                e.Cancel = true;                
                 return;
             }
 
