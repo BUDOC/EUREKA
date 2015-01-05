@@ -72,12 +72,11 @@ namespace WindowsFormsApplication1
         Random r = new Random();
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            this.chart1.Series["Causes"].Points.Clear();
-            this.chart1.Series["Causes"].Points.AddXY("c1", r.Next(20));
-            this.chart1.Series["Causes"].Points.AddXY("c2", r.Next(20));
-            this.chart1.Series["Causes"].Points.AddXY("c3", r.Next(20));
-            this.chart1.Series["Causes"].Points.AddXY("c4", r.Next(20));
+           this.chart1.Series["Causes"].Points.Clear();
+           this.chart1.Series["Causes"].Points.AddXY("c1", r.Next(20));
+           this.chart1.Series["Causes"].Points.AddXY("c2", r.Next(20));
+           this.chart1.Series["Causes"].Points.AddXY("c3", r.Next(20));
+           this.chart1.Series["Causes"].Points.AddXY("c4", r.Next(20));
         }
 
         private void RbPb_CheckedChanged(object sender, EventArgs e)
