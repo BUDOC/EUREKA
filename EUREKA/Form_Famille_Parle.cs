@@ -9,9 +9,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class FormCopie : Form
+    public partial class FormFamilleParle : Form
     {
-        public FormCopie()
+        private bool vous = false;
+        public FormFamilleParle()
         {
             InitializeComponent();
         }
@@ -38,10 +39,15 @@ namespace WindowsFormsApplication1
 
         private void BtSuite_Click(object sender, EventArgs e)
         {
-
-            FormFamilleParle frm = new FormFamilleParle();
-          frm.ShowDialog(); // modale
-           
+          
         }
+
+        private void FormFamille_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          
+
+        }
+
+
     }
 }

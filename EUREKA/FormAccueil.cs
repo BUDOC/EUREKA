@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
     public partial class FormAccueil : Form
     {
         //   int mavaleur = 1000;
-        Form Alancer = new FormFamille();
+        Form Alancer = new FormFamille(); // declaration de variable membre
 
         //public List<bool> TabChoix = new List<bool>();
         public FormAccueil()
@@ -38,13 +38,13 @@ namespace WindowsFormsApplication1
 
         private void RbFamile_CheckedChanged(object sender, EventArgs e)
         {
-                        Alancer = new FormFamille();
+                     //   Alancer = new FormFamille(); // assigne Alancer
         }
 
         private void BtValide_Click(object sender, EventArgs e)
         {
-            Form frm = new FormFamille();
-            frm.ShowDialog();         // modale
+          //  Form frm = new FormFamille();
+           // frm.ShowDialog();         // modale
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,8 +65,7 @@ namespace WindowsFormsApplication1
          //   MessageBox.Show("appui sur BP valider");
             Alancer.ShowDialog();          
             string A = Alancer.Name;
-            this.RbPb.Enabled = true;
-            //MessageBox.Show(A);
+         
             
         }
         Random r = new Random();
@@ -81,7 +80,11 @@ namespace WindowsFormsApplication1
 
         private void RbPb_CheckedChanged(object sender, EventArgs e)
         {
-           Alancer = new FormCopie();            
+              // this.RbPb.Enabled = true;
+               FormFamilleParle Alancer = new FormFamilleParle();
+            //MessageBox.Show(A);
+          
+           Alancer = new FormFamilleParle();            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,7 +94,9 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)// temporaire pour tester : forcer le radiobutton
         {
+           
             this.RbPb.Enabled = true;
+            this.RbFamile.Checked = true;
         }
 
 
