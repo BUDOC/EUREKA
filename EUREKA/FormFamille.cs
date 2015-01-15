@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.label1.Text = " Je m'appelle Julien j'ai 14 ans et je suis en 3emme au Collège Jules Renard.";
+            this.label1.Text = " Je m'appelle Julien j'ai 14 ans et je suis en 3eme au Collège Jules Renard.";
         }
 
         private void BtSuite_Click(object sender, EventArgs e)
